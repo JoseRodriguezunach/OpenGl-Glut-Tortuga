@@ -59,70 +59,15 @@ void reshape(int WindowWidth, int WindowHeight)
 }
 void draw()
 {
-	//point(5.5, 5.5, 10.0, 1, 0, 0);
-	//triangle();
-	polygon();
-	//turtle();
+
+	turtle();
 }
-void point(float x, float y, float size, float r, float g, float b)
-{
-	glPointSize(size);
-
-	glBegin(GL_POINTS);
-	glColor3f(r, g, b);
-	glVertex2f(x, y);
-	glEnd();
-}
-void triangle()
-{
-	glBegin(GL_TRIANGLES);
-	glColor3f(0, 1, 0);
-	glVertex2f(2, 3);
-	glVertex2f(1, 1);
-	glVertex2f(3, 1);
-	glEnd();
-}
-void polygon()
-{
-	glTranslatef(0.5, 0.5, 0);
-	//glRotatef(25.0, 0, 0, 1);
-	//glScalef(1.1, 1.1, 0);
 
 
-	glBegin(GL_POLYGON);
-		glColor3f(1, 0, 0);
-		glVertex2f(0, 3.5);
-		glColor3f(0, 0, 1);
-		glVertex2f(-2, 2);
-		glVertex2f(-1, 0);
-		glVertex2f(1, 0);
-		glVertex2f(2, 2);
-	glEnd();
 
-
-	//glBegin(GL_POLYGON);
-	//glColor3f(1, 1, 0);
-	//glVertex2f(1, 4);
-	//glColor3f(0, 1, 1);
-	//glVertex2f(2, 4);
-	//glVertex2f(2.5, 4.9);
-	//glVertex2f(2, 5.8);
-	//glVertex2f(1, 5.8);
-	//glVertex2f(0.5, 4.9);
-	//glEnd();
-
-	//glBegin(GL_QUADS);
-	//glColor3f(1, 1, 0);
-	//	glVertex2f(-2.5, -2);
-	//glColor3f(0, 1, 1);
-	//	glVertex2f(-2.5, -3);
-	//	glVertex2f(-3.5, -3);
-	//	glVertex2f(-3.5, -2);
-	//glEnd();
-
-}
 void turtle()
 {
+	glRotatef(25.0, 0, 0, 1);
 	//Cabeza
 	//========================================
 	glBegin(GL_POLYGON);
@@ -283,7 +228,7 @@ void turtle()
 	// ALETA iNF IZQ
 	//========================================
 	glBegin(GL_POLYGON);
-	glColor3f(1, 0, 0);
+	glColor3ub(70, 10, 10);
 
 	glVertex2f(-4, -2);
 	glVertex2f(-6, -5);
@@ -309,7 +254,7 @@ void turtle()
 	// ALETA iNF DER
 	//========================================
 	glBegin(GL_POLYGON);
-	glColor3f(1, 0, 0);
+	glColor3ub(70, 10, 10);
 
 	glVertex2f(2, -4);
 	glVertex2f(3, -6);
